@@ -134,7 +134,7 @@ hanya sebagai hiasan saja, jika bisa print-nya, ya bagus, jika tidak bisa digant
 
 ## Hasil
 buatlah sebuah demo video yang merekam semua case (menambah, mengedit, menghapus buku, serta seluruh error handlingnya (jika ada)), upload ke youtube dan sertakan linknya https://youtu.be/O65m2t9KTVw
-![](SERTAKAN_GAMBARNYA_DISINI)
+![image](https://user-images.githubusercontent.com/49663453/68568681-dd20c180-048e-11ea-9217-48784cb27aa4.png)
 
 ## Upload
 upload seluruh folder project java-nya ke repository ini
