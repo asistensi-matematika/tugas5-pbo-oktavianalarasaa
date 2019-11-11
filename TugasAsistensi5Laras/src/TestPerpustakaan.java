@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import java.io*;
+import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -68,8 +68,8 @@ public class TestPerpustakaan {
             sd = Math.pow((perpus[i].getHalaman()- ratarata),2);
             
         }
-        double rataFiksi = HalamanFiksi,fiksi;
-        double rataNonFiksi = HalamanNonFiksi/nonfiksi;
+        double rataFiksi = HalamanFiksi/fiksi;
+        double rataNonFiksi = HalamanNonfiksi/nonfiksi;
         for(int i= 0 ; i<n; i++){
             if(perpus[i].getJenis()=="fiksi"){
                 sdf = Math.pow((perpus[i].getHalaman()-rataFiksi), 2);
@@ -109,10 +109,10 @@ public class TestPerpustakaan {
                     int halaman = baca.nextInt();
                     perpus[n-1].setHalaman(halaman);
                     
-                    int coinflip = aja.nextint(2)+1;
+                    int coinflip = aja.nextInt(2)+1;
                     if(coinflip == 1){
-                        perpus[n-1]= new Buku (judul,pengarang,"Fiksi", halaman);
-                        Fiksi +=1;
+                        perpus[n-1]= new buku (judul,pengarang,"Fiksi", halaman);
+                        fiksi +=1;
                         HalamanFiksi += halaman;
                         
                     }
@@ -131,19 +131,19 @@ public class TestPerpustakaan {
                     String judul = baca.next();
                     perpus[UbahBuku-1].setJudul(judul);
                     System.out.println("Masukkan Pengarang Buku :");
-                    string pengarang = dita.next();
+                    String pengarang = baca.next();
                     perpus[UbahBuku-1].setPengarang(pengarang);
                     
-                    int halLama = perpustakaan[UbahBuku-1].getHalaman();
+                    int halLama = perpus[UbahBuku-1].getHalaman();
                     System.out.println("Masukkan Jumlah Halaman Buku : ");
                     int halaman = baca.nextInt();
                     perpus[UbahBuku-1].setHalaman(halaman);
                     jumlahHalaman = jumlahHalaman - halLama + halaman;
-                    if(perpustakaan[UbahBuku-1].getJenis()=="fiksi"){
-                        HalamanFiksi = HalamanFiksi - halLama + perpustakaan [UbahBuku].getHalaman();
+                    if(perpus[UbahBuku-1].getJenis()=="fiksi"){
+                        HalamanFiksi = HalamanFiksi - halLama + perpus [UbahBuku].getHalaman();
                         
                     }else{
-                        HalamanNonFiksi = HalamanNonFiksi - halLama + peprus[UbahBuku].gethalaman();
+                        HalamanNonfiksi = HalamanNonfiksi - halLama + perpus[UbahBuku].getHalaman();
                     }
                     
                 } else if (pilih == 3){
@@ -168,25 +168,55 @@ public class TestPerpustakaan {
               
         }else{
                   nonfiksi -= 1;
-                  HalamanNonFiksi -= peprus[HapusBuku].getHalaman();
+                  HalamanNonfiksi -= perpus[HapusBuku].getHalaman();
                   
               }
         }else{
-                    awal = 0;
+                    pil = 0;
                 }
                 
-    }while (awal != 0 );
+    }while (pil != 0 );
         String path = "DATA.txt";
         try{
             FileWriter fw = new FileWriter(path);
-            BufferedWrriter ajah = new BufferedWriter(fw);
+            BufferedWriter ajah = new BufferedWriter(fw);
             for(int i = 0; i<n; i++){
                 int a = i +1;
                 ajah.write("Buku ke- ["+ Integer.toString(a)+"]");
                 ajah.newLine();
-                ajah.write("Judul : "+perpustakaan[i])
+                ajah.write("Judul : "+perpus[i].getJudul());
+                ajah.newLine();
+                ajah.write("Pengarang : " +perpus[i].getPengarang());
+                ajah.newLine();
+                ajah.write("Jumlah Halaman : "+Integer.toString(perpus[i].getHalaman()));
+                ajah.newLine();
+                ajah.write("JenisBuku : "+perpus[i].getJenis());
+                ajah.newLine();
+                ajah.newLine();
+                
             }
+            ajah.close();
             
-        }
+            
+        }catch (Exception e){
 
         }
+    }
+    public static void garis(){
+        System.out.println("================================================================================================================================");
+    }
+    public static void header (String Perpustakaan){
+        File file = new File(Perpustakaan);
+        String encoding = "utf-8";
+        try(InputStreamReader isr = new InputStreamReader(new FileInputStream(file),encoding)){
+            int data = isr.read();
+            while (data != -1){
+                System.out.print((char)data);
+                data = isr.read();
+            }
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+}

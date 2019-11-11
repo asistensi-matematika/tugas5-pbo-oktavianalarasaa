@@ -1,0 +1,18 @@
+Buku ke : [1]
+Judul : buku
+Pengarang : Kata
+Jumlah Halaman : 300
+Jenis Buku : fiksi
+
+Buku ke : [2]
+Judul : buku
+Pengarang : Kata
+Jumlah Halaman : 300
+Jenis Buku : nonfiksi
+
+Buku ke : [3]
+Judul : buku
+Pengarang : Kata
+Jumlah Halaman : 300
+Jenis Buku : nonfiksi
+

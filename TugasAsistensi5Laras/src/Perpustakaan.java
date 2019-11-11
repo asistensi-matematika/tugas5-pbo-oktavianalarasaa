@@ -38,6 +38,14 @@ class buku extends Perpustakaan{
         this.pengarang = pengarang;
     }
 
+    public void setJudul(String judul) {
+        this.judul = judul;
+    }
+
+    public String getJudul() {
+        return judul;
+    }
+
     public int getHalaman() {
         return halaman;
     }
