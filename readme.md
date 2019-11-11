@@ -1,8 +1,8 @@
 # TUGAS 5 ASISTENSI PBO - Jumat, 1 November 2019
 
-NAMA: `isi nama disini`
+NAMA: Oktaviana Larasati
 
-NRP: `isi nrp disini`
+NRP: 06111840000107
 
 ## Deskripsi Tugas
 Buatlah UML diagram sesuai dengan class, object, method dan property yang kamu buat, sebagai referensi untuk memulai:
@@ -133,7 +133,7 @@ hanya sebagai hiasan saja, jika bisa print-nya, ya bagus, jika tidak bisa digant
 
 
 ## Hasil
-buatlah sebuah demo video yang merekam semua case (menambah, mengedit, menghapus buku, serta seluruh error handlingnya (jika ada)), upload ke youtube dan sertakan linknya [disini](INSERT_YOUTUBE_URL_HERE)
+buatlah sebuah demo video yang merekam semua case (menambah, mengedit, menghapus buku, serta seluruh error handlingnya (jika ada)), upload ke youtube dan sertakan linknya https://youtu.be/O65m2t9KTVw
 ![](SERTAKAN_GAMBARNYA_DISINI)
 
 ## Upload
